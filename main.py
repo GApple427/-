@@ -1,8 +1,9 @@
 import discord
+import os
 
 client = discord.Client()
 
-token = "ODAwMjkzMTI4Nzc0NjE1MDYy.YAQBDg.F65dbdnAgkRhP11wUl6gbRuJFqw"
+token = "ODAwMjkzMTI4Nzc0NjE1MDYy.YAQBDg.gr3wzIa6MG4w-8s7V0dfUB-ukcw"
 
 @client.event
 async def on_ready():
@@ -81,5 +82,5 @@ async def on_message(message):
         await message.channel.send("**도배도배**")
 
 
-
-client.run(token)
+access_token = os.enviro["BOT_TOKEN"]
+client.run(access_token)
